@@ -12,6 +12,14 @@ Views.Picture = Backbone.Marionette.ItemView.extend(
       elAttribute: 'src'
     title:
       selector: '[name=title]'
+    likes_count:
+      selector: '[name=likes_count]'
+    comments_count:
+      selector: '[name=comments_count]'
+    player:
+      selector: '[name=player_name]'
+      converter: (direction, value)->
+        return value.name if value?
 
   initialize: ()->
     @$el.addClass('pic_item')

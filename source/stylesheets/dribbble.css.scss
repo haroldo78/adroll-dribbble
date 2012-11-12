@@ -8,6 +8,9 @@ a{
     color:inherit;
     text-decoration:inherit;
 }
+.left{
+    float:left;
+}
 #dribble_app{
     width:$width;
     margin-left:auto;
@@ -55,7 +58,6 @@ a{
     color:#AAA;
 }
 .pic_footer{
-    display:none;
     padding:4px 6px 4px 6px;
     position:absolute;
     bottom:0px;
@@ -64,4 +66,29 @@ a{
     opacity:0.7;
     font-size:12px;
     color:#AAA;
+}
+.pic_footer_name{
+    display:none;
+    height:12px;
+}
+.pic_footer_likes{
+    width:38px;
+    height:12px;
+}
+.pic_footer_comments{
+    width:38px;
+    height:12px;
+}
+.pic_footer_info{
+    margin-left:4px;
+}
+.icon_comment{
+    width:12px;
+    height:12px;
+    background:url(/images/icon-comments.png) 0 0;
+}
+.icon_heart{
+    width:12px;
+    height:12px;
+    background:url(/images/icon-hearts.png) 0 0;
 }

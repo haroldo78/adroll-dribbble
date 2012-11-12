@@ -2,3 +2,10 @@
   .pic_header{name:'title'}
   %img{name:'image_teaser_url', src:'http://tinyurl.com/av5mqye'}
   .pic_footer
+    .left.pic_footer_name{name:'player_name'}
+    .left.pic_footer_likes.pic_footer_info
+      .left.icon_heart
+      .left.pic_footer_info{name:'likes_count'}
+    .left.pic_footer_comments.pic_footer_info
+      .left.icon_comment
+      .left.pic_footer_info{name:'comments_count'}
