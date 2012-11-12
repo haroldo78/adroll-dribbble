@@ -1,0 +1,32 @@
+$width: 800px;
+
+body{
+    background-color: #111;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a{
+    color:inherit;
+    text-decoration:inherit;
+}
+#dribble_app{
+    width:$width;
+    margin-left:auto;
+    margin-right:auto;    
+}
+#nav{
+    width:$width;
+    height:20px;
+    padding:10px 0px 10px 0px;
+    font-size:18px;
+    font-weight:bold;
+    color:#AAA;
+    border-bottom:1px solid #AAA;        
+}
+.nav_item{
+    float:left;
+    margin-left:30px;
+}
+#content{
+    width:$width;
+    padding-top:5px;
+}

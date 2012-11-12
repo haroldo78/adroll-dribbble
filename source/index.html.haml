@@ -1,0 +1,19 @@
+%html
+  %head
+    %title
+      Nick Knudson - Dribbble Project
+    = stylesheet_link_tag 'normalize', 'dribbble'
+    = javascript_include_tag 'dribbble'
+  %body
+    #dribble_app
+      %ul#nav
+        %li.nav_item
+          %a{:href => 'popular'}
+            Popular
+        %li.nav_item
+          %a{:href => 'debut'}
+            Debut
+        %li.nav_item
+          %a{:href => 'Everyone'}
+            Everyone
+      #content
