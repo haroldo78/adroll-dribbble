@@ -1,0 +1,33 @@
+(function() {
+  var _ref;
+
+  if ((_ref = window.JST) == null) {
+    window.JST = {};
+  }
+
+  window.JST['cart'] = function(context) {
+    return (function() {
+      var $c, $e, $o, item, _i, _len, _ref1;
+      $e = window.HAML.escape;
+      $c = window.HAML.cleanValue;
+      $o = [];
+      $o.push("<div id='cart'>\n  <h2>Cart</h2>");
+      if (this.cart.length === 0) {
+        $o.push("  <p class='empty'>Your cart is empty</p>");
+      } else {
+        $o.push("  <ul>");
+        _ref1 = this.cart;
+        for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+          item = _ref1[_i];
+          $o.push("    <li>\n      <div class='item'>");
+          $o.push("        " + $e($c(item.name)));
+          $o.push("        <a href='/cart/item/remove/" + item.id + "'>Remove Item</a>\n      </div>\n    </li>");
+        }
+        $o.push("  </ul>");
+      }
+      $o.push("</div>");
+      return $o.join("\n").replace(/\s(\w+)='true'/mg, ' $1').replace(/\s(\w+)='false'/mg, '');
+    }).call(window.HAML.context(context));
+  };
+
+}).call(this);
