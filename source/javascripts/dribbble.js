@@ -1,3 +1,6 @@
 //= require_tree ./lib
 //= require hamlcoffee
-//= require_tree .
+//= require models
+//= require collections
+//= require templates
+//= require views
