@@ -1,6 +1,0 @@
-#cart
-  %h2 Cart
-    %p.empty Your cart is empty
-    %ul
-      %li
-        .item
