@@ -4,11 +4,12 @@
 #= require collections
 #= require templates
 #= require views
+#= require router
 
 $(document).ready ()->
   window.app = new Backbone.Marionette.Application()
   app.popular = new Collections.Pictures({},{list: 'popular'})
-  app.debut = new Collections.Pictures({},{list: 'debuts'})
+  app.debuts = new Collections.Pictures({},{list: 'debuts'})
   app.everyone = new Collections.Pictures({},{list: 'everyone'})
 
   # Application Regions
@@ -17,12 +18,19 @@ $(document).ready ()->
     content: '#content'
   )
 
-  # Show popular
+  # Prepare popular
   app.popularView = new Views.Pictures({collection: app.popular})
-  app.content.show(app.popularView)
+  app.popular.fetch()
 
   # Prepate debut
-  app.debut = new Views.Pictures({collection: app.debut})
+  app.debutsView = new Views.Pictures({collection: app.debuts})
+  app.debuts.fetch()
 
   # Prepare everyone
-  app.everyone = new Views.Pictures({collection: app.everyone})
+  app.everyoneView = new Views.Pictures({collection: app.everyone})
+  app.everyone.fetch()
+
+  # Router
+  app.router = new Router(app)
+
+  Backbone.history.start()

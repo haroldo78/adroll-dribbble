@@ -7,14 +7,14 @@ Views.Pictures = Backbone.Marionette.CompositeView.extend(
   itemViewContainer: '.list_content'
 
   onShow: ()->
-    @collection.fetch()
-
-  onRender: ()->
     if ($(window).height()) >= @$('.list_content').height()
       @collection.requestNextPage({add:true})
     $(window).scroll(()=>
-      if ($(window).height() + $(window).scrollTop() - @$('.list_content').offset().top) >= @$('.list_content').height()
+      if ($(window).height() + $(window).scrollTop()) >= @$('.list_content').height()
         @collection.requestNextPage({add:true})
     )
+
+  onClose: ()->
+    $(window).unbind('scroll')
 
 )
