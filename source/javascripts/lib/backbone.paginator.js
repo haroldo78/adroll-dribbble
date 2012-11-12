@@ -86,7 +86,7 @@ Backbone.Paginator = (function ( Backbone, _, $ ) {
       });
 
       queryOptions = _.extend(queryOptions, {
-        jsonpCallback: 'callback',
+        //jsonpCallback: 'callback',
         data: decodeURIComponent($.param(queryAttributes)),
         processData: false,
         url: _.result(queryOptions, 'url')
@@ -739,7 +739,7 @@ Backbone.Paginator = (function ( Backbone, _, $ ) {
       }
 
       queryOptions = _.extend(queryOptions, {
-        jsonpCallback: 'callback',
+        //jsonpCallback: 'callback',
         processData: false,
         url: _.result(queryOptions, 'url')
       }, options);

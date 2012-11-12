@@ -30,3 +30,38 @@ a{
     width:$width;
     padding-top:5px;
 }
+
+.pic_item{
+    float:left;
+    width:200px;
+    height:150px;
+}
+.pic{
+    position:relative;
+    width:200px;
+    height:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.pic_header{
+    display:none;
+    padding:4px 6px 4px 6px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color:#333;
+    opacity:0.7;
+    font-size:12px;
+    color:#AAA;
+}
+.pic_footer{
+    display:none;
+    padding:4px 6px 4px 6px;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    background-color:#333;
+    opacity:0.7;
+    font-size:12px;
+    color:#AAA;
+}

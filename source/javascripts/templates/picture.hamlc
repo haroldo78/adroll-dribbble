@@ -1,0 +1,4 @@
+.pic
+  .pic_header{name:'title'}
+  %img{name:'image_teaser_url', src:'http://tinyurl.com/av5mqye'}
+  .pic_footer

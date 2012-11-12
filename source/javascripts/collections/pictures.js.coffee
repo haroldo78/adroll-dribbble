@@ -2,16 +2,20 @@ Collections.Pictures = Backbone.Paginator.requestPager.extend(
 
   model: Models.Picture
 
+  initialize: (models,options)->
+    @list = options.list
+
   paginator_core:
     type: 'GET'
     dataType: 'jsonp'
-    url: 'http://api.dribbble.com/shots/popular'
+    url: ()->
+      return "http://api.dribbble.com/shots/#{@list}"
 
   paginator_ui:
     firstPage: 0
     currentPage: 0
     perPage: 12
-    totalPages: 1
+    totalPages: 10
 
   server_api:
     'page': ()->
