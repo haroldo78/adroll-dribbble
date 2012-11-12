@@ -1,6 +1,6 @@
 .pic
   .pic_header{name:'title'}
-  %img{name:'image_teaser_url', src:'http://tinyurl.com/av5mqye'}
+  %img{name:'image_teaser_url', src:'/images/ajax-loader.gif'}
   .pic_footer
     .left.pic_footer_name{name:'player_name'}
     .left.pic_footer_likes.pic_footer_info
