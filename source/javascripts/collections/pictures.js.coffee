@@ -12,8 +12,8 @@ Collections.Pictures = Backbone.Paginator.requestPager.extend(
       return "http://api.dribbble.com/shots/#{@list}"
 
   paginator_ui:
-    firstPage: 0
-    currentPage: 0
+    firstPage: 1
+    currentPage: 1
     perPage: 12
     totalPages: 10
 

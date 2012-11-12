@@ -18,14 +18,11 @@ $(document).ready ()->
   )
 
   # Show popular
-  app.popular.fetch()
   app.popularView = new Views.Pictures({collection: app.popular})
   app.content.show(app.popularView)
 
   # Prepate debut
-  app.debut.fetch()
   app.debut = new Views.Pictures({collection: app.debut})
 
   # Prepare everyone
-  app.everyone.fetch()
   app.everyone = new Views.Pictures({collection: app.everyone})
